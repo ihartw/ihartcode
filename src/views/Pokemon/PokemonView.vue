@@ -2,7 +2,7 @@
    import { ref, onMounted, onUnmounted } from 'vue'
    import { useAnimate } from '@vueuse/core'
    import { pokemonInit } from '../../assets/js/pokemon.js'
-   import { confetti } from '../../assets/js/confetti.js';
+   import { confetti } from '../../assets/js/confetti.js'
 
    onMounted(() => {
       pokemonInit();
@@ -150,10 +150,6 @@
             </div>
          </div>
       </div>
-
-      <audio id="youWin">
-         <source src="./audio/you_win.m4a" type="audio/mpeg">
-      </audio>
    </div>
 </template>
 

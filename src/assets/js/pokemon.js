@@ -108,7 +108,6 @@ export const pokemonInit = () => {
                   card.classList.remove('disabled');
                });
                confetti.start();
-               document.querySelector('audio#youWin').play();
             }, 800);
          }
       });
