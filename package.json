@@ -1,0 +1,23 @@
+{
+  "name": "ihartcode",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/components": "^10.3.0",
+    "@vueuse/core": "^10.3.0",
+    "jquery": "^3.7.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.6"
+  }
+}

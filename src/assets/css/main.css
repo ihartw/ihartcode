@@ -1,0 +1,68 @@
+@import './light-red.css';
+
+:root {
+   --background-color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+   :root {
+      --background-color: #111;
+   }
+}
+
+body {
+   color: hsl(0, 0%, 75%);
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   background: #111
+}
+
+h1 {
+   font-weight: 300;
+   font-size: 30px;
+   line-height: 40px;
+   color: #fff;
+   padding-bottom: 30px
+}
+
+h2,
+p {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 18px;
+   color: #969696;
+   letter-spacing: .1em;
+   display: inline;
+   padding-bottom: 20px
+}
+
+h3 {
+   font-family: Lekton, sans-serif;
+   font-size: 2.1rem !important;
+   color: #bfbfbf;
+   letter-spacing: .1em;
+   line-height: 50px !important;
+   border-bottom: 1px dotted rgba(399, 399, 399, .5);
+}
+
+p {
+   font-size: 14px;
+   line-height: 15px
+}
+
+.clickable {
+   cursor: pointer;
+}
+
+.padded,
+.padded-top {
+   padding-top: 60px
+}
+
+.padded,
+.padded-bottom {
+   padding-bottom: 60px
+}
+
+.section {
+   padding: 0px !important;
+}

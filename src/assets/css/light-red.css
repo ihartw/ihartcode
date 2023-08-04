@@ -1,0 +1,19 @@
+.highlight {
+	color: #ef5350;
+}
+
+.bar-fill {
+	background: #ef5350;
+}
+
+.button {
+	border-bottom: 2px solid #ef5350;
+}
+
+.link {
+	color: #ef5350 !important;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
