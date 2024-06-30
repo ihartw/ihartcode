@@ -5,6 +5,7 @@
    import MarvelImg from '../assets/images/marvel.png'
    import RickMortyImg from '../assets/images/rick_morty.jpeg'
    import PlanetariumImg from '../assets/images/stars.jpeg'
+   import KeyboardImg from '../assets/images/keyboard.png'
    import PikaImg from '../assets/images/pika.jpg'
    import GoogleImg from '../assets/images/google_books.png'
    import router from '../router/index.js'
@@ -27,23 +28,24 @@
       }
    });
 
-   const projects = ref([{
-         title: 'Marvel',
-         link: 'https://ihartcode-marvel.netlify.app',
-         imageUrl: MarvelImg,
-         description: 'A web app using the Marvel API and built with Vue & Bootstrap',
-      },
-      {
-         title: 'Rick Sanchez A.I.',
-         link: 'https://conduit-ai.netlify.app/',
-         imageUrl: RickMortyImg,
-         description: 'A Rick Sanchez A.I. ask him anything about the infinite multiverse',
-      },
+   const projects = ref([
       {
          title: 'Google Books',
          link: 'https://ihartcode-vue-google-books.netlify.app/',
          imageUrl: GoogleImg,
          description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+      },
+      {
+         title: 'Virtual Keyboard',
+         link: 'https://ihartcode-virtual-keyboard.netlify.app/#/',
+         imageUrl: KeyboardImg,
+         description: `A virtual keyboard made with Vue.js and materialize css. Use your keyboard to play or touch if you're on mobile`,
+      },
+      {
+         title: 'Marvel',
+         link: 'https://ihartcode-marvel.netlify.app',
+         imageUrl: MarvelImg,
+         description: 'A web app using the Marvel API and built with Vue & Bootstrap',
       },
       {
          title: 'Memory Game',

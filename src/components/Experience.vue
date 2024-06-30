@@ -44,7 +44,7 @@
          <div class="timeline" ref="resumeLine"></div>
          <div class="row">
             <div class="time">May 2021 - Present</div>
-            <div class="details"><span class="strong">Infiniscape</span><br>Sr Frontend Software Engineer</div>
+            <div class="details"><span class="strong">Kyndr by Infiniscape</span><br>Senior Frontend Engineer</div>
          </div>
          <div class="row">
             <div class="time">May 2019 - Sep 2020</div>
