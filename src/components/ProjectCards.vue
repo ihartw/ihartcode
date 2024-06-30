@@ -7,6 +7,8 @@
    import PlanetariumImg from '../assets/images/stars.jpeg'
    import KeyboardImg from '../assets/images/keyboard.png'
    import PikaImg from '../assets/images/pika.jpg'
+   import BlackJackImg from '../assets/images/blackjack.jpg'
+   import StarsImg from '../assets/images/stars.jpeg'
    import GoogleImg from '../assets/images/google_books.png'
    import router from '../router/index.js'
 
@@ -30,10 +32,16 @@
 
    const projects = ref([
       {
-         title: 'Google Books',
-         link: 'https://ihartcode-vue-google-books.netlify.app/',
-         imageUrl: GoogleImg,
-         description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+         title: 'Memory Game',
+         link: 'memory-match/index.html',
+         imageUrl: PikaImg,
+         description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
+      },
+      {
+         title: 'Blackjack',
+         link: 'https://ihartcode-blackjack.netlify.app/',
+         imageUrl: BlackJackImg,
+         description: 'A blackjack webapp built with javascript and css. Deal the cards and try to beat the dealer!',
       },
       {
          title: 'Virtual Keyboard',
@@ -42,16 +50,22 @@
          description: `A virtual keyboard made with Vue.js and materialize css. Use your keyboard to play or touch if you're on mobile`,
       },
       {
-         title: 'Marvel',
+         title: 'Google Books API',
+         link: 'https://ihartcode-vue-google-books.netlify.app/',
+         imageUrl: GoogleImg,
+         description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+      },
+      {
+         title: 'Planetarium',
+         link: 'https://ihartcode-planetarium.netlify.app/',
+         imageUrl: StarsImg,
+         description: `A virtual planetarium made with html, css animations, and javascript. Click on a planet to view more info.`,
+      },
+      {
+         title: 'Marvel API',
          link: 'https://ihartcode-marvel.netlify.app',
          imageUrl: MarvelImg,
          description: 'A web app using the Marvel API and built with Vue & Bootstrap',
-      },
-      {
-         title: 'Memory Game',
-         link: 'memory-match/index.html',
-         imageUrl: PikaImg,
-         description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
       },
    ])
 

@@ -79,10 +79,6 @@
             <div class="bar">
                <div class="bar-fill" ></div>
             </div>
-            <div class="bar-title">Bitbucket<span class="align-right"></span></div>
-            <div class="bar">
-               <div class="bar-fill" ></div>
-            </div>
          </div>
       </div>
    </section>
