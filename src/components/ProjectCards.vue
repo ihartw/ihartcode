@@ -51,7 +51,7 @@
          title: 'Memory Game',
          link: 'memory-match/index.html',
          imageUrl: PikaImg,
-         description: 'A Pokemon memory game. Help Ash with his memory and flex your own.',
+         description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
       },
    ])
 
