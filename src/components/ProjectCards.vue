@@ -38,12 +38,6 @@
          description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
       },
       {
-         title: 'Blackjack',
-         link: 'https://ihartcode-blackjack.netlify.app/',
-         imageUrl: BlackJackImg,
-         description: 'A blackjack webapp built with javascript and css. Deal the cards and try to beat the dealer!',
-      },
-      {
          title: 'Virtual Keyboard',
          link: 'https://ihartcode-virtual-keyboard.netlify.app/#/',
          imageUrl: KeyboardImg,
@@ -54,12 +48,6 @@
          link: 'https://ihartcode-vue-google-books.netlify.app/',
          imageUrl: GoogleImg,
          description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
-      },
-      {
-         title: 'Planetarium',
-         link: 'https://ihartcode-planetarium.netlify.app/',
-         imageUrl: StarsImg,
-         description: `A virtual planetarium made with html, css animations, and javascript. Click on a planet to view more info.`,
       },
       {
          title: 'Marvel API',
