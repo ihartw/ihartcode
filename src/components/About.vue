@@ -29,7 +29,7 @@
          <div class="col m12 l6 push-l6">
             <h3 class="center-align">About Me</h3>
             <p>
-               I'm a Software Engineer with about 8 years of experience. I love building beautiful web
+               I'm a Software Engineer with a lot of experience. I love building beautiful web
                applications and problem solving. Apart from coding I also enjoy playing instruments and drawing. If
                you're in need of a talented Developer that also has a wide range of skills get in touch!
             </p>

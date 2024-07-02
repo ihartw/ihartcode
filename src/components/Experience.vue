@@ -64,7 +64,7 @@
             </div>
          </div>
          <div class="row">
-            <div class="time">Oct 2014 - Aug 2017</div>
+            <div class="time">Jan 2016 - Aug 2017</div>
             <div class="details"><span class="strong">Codify Academy</span><br>Lead Mentor | Front End
                Developer</div>
          </div>
