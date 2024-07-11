@@ -20,9 +20,9 @@
       <div class="container">
          <about></about>
          <skills></skills>
+         <experience></experience>
          <project-cards></project-cards>
          <art></art>
-         <experience></experience>
       </div>
 </template>
 

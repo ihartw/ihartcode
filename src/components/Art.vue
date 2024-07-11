@@ -8,7 +8,7 @@
    <section id="art" class="section scrollspy">
       <div class="row padded-top">
          <div class="col s12 title">
-            <h3 class="description">Artwork</h3>
+            <h3 class="description center-align">Artwork</h3>
          </div>
       </div>
       <div class="valign-wrapper">
