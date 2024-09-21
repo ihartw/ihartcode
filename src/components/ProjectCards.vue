@@ -1,7 +1,6 @@
 <script setup>
    import { ref } from 'vue'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
-   import { store } from '../store/store.js'
    import MarvelImg from '../assets/images/marvel.png'
    import RickMortyImg from '../assets/images/rick_morty.jpeg'
    import PlanetariumImg from '../assets/images/stars.jpeg'
@@ -38,6 +37,12 @@
          description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
       },
       {
+         title: 'Rick Sanchez AI',
+         link: 'https://rick-sanchez-ai.netlify.app/',
+         imageUrl: RickMortyImg,
+         description: 'A Rick Sanchez AI chatbot made with the openAI API and Vue.js. Ask Rick anything!',
+      },
+      {
          title: 'Virtual Keyboard',
          link: 'https://ihartcode-virtual-keyboard.netlify.app/#/',
          imageUrl: KeyboardImg,
@@ -48,12 +53,6 @@
          link: 'https://ihartcode-vue-google-books.netlify.app/',
          imageUrl: GoogleImg,
          description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
-      },
-      {
-         title: 'Marvel API',
-         link: 'https://ihartcode-marvel.netlify.app',
-         imageUrl: MarvelImg,
-         description: 'A web app using the Marvel API and built with Vue & Bootstrap',
       },
    ])
 
