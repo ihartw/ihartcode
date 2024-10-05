@@ -42,9 +42,8 @@
          <div class="col s11 l6">
             <h3 class="center-align">My Skills</h3>
             <p>
-               The languages and frameworks listed are what I've worked with the most but I have exposure to all sorts
-               of web technologies and work to expand my Fullstack knowledge. I'm mostly interested in UI development
-               with frameworks like Vue or React but I'm always interested in anything Web Dev related.
+               The languages and frameworks listed are what I've worked with most recently but I have exposure to all sorts
+               of web technologies and work to expand my fullstack knowledge. Lately, I'm mostly interested in mobile app development with React Native but I'm always interested in anything Web Dev related and have a passion for learning new things.
             </p>
             <p>Check out some of my work at
                <a href="https://github.com/ihartw" target="_blank" class="link">GitHub</a>

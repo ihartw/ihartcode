@@ -8,6 +8,7 @@
    import Skills from '../components/Skills.vue'
    import Art from '../components/Art.vue'
    import Experience from '../components/Experience.vue'
+   import Music from '../components/Music.vue'
 
    onMounted(() => {
       M.AutoInit();
@@ -23,6 +24,7 @@
          <experience></experience>
          <project-cards></project-cards>
          <art></art>
+         <music></music>
       </div>
 </template>
 

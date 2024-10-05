@@ -31,8 +31,8 @@
          })
       }
    });
-
 </script>
+
 <template>
    <section id="experience" class="section scrollspy experience" ref="experience">
       <div class="row">

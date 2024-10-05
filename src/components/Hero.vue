@@ -54,7 +54,7 @@
       background: white !important;
       opacity: .8;
       overflow-y: hidden;
-      height: 100vh;
+      height: 90vh;
    }
 
    .hero h1 {

@@ -20,7 +20,6 @@
          });
       }
    });
-
 </script>
 
 <template>
@@ -29,9 +28,9 @@
          <div class="col m12 l6 push-l6">
             <h3 class="center-align">About Me</h3>
             <p>
-               I'm a Software Engineer with a lot of experience. I love building beautiful web
-               applications and problem solving. Apart from coding I also enjoy playing instruments and drawing. If
-               you're in need of a talented Developer that also has a wide range of skills get in touch!
+               I'm a Software Engineer who loves problem solving and building beautiful web/mobile
+               applications. Outside of coding I also enjoy playing instruments and drawing as a hobby. I consider myself a creative and enjoy mixing my artistic ability with my technical skills to create awesome products and experiences. If
+               you're looking for a talented Engineer that has a wide range of skills get in touch!
             </p>
             <p>Connect with me on
                <a href="https://www.linkedin.com/in/isaac-hartwick-44b883117" target="_blank" class="link">LinkedIn</a>

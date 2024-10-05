@@ -14,6 +14,7 @@
          <li class="nav-link link-skil" @click="store.scrollTo('skills')">Skills</li>
          <li class="nav-link link-projects" @click="store.scrollTo('projects')">Projects</li>
          <li class="nav-link link-art" @click="store.scrollTo('art')">Artwork</li>
+         <li class="nav-link link-music" @click="store.scrollTo('music')">Music</li>
          <li class="nav-link link-experience" @click="store.scrollTo('experience')">Experience</li>
       </ul>
    </header>

@@ -102,7 +102,7 @@
 
    .carousel {
       opacity: 0;
-      height: 600px !important;
+      height: 400px !important;
    }
 
    .carousel-item {
