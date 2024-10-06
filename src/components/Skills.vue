@@ -42,14 +42,13 @@
          <div class="col s11 l6">
             <h3 class="center-align">My Skills</h3>
             <p>
-               The languages and frameworks listed are what I've worked with most recently but I have exposure to all sorts
-               of web technologies and work to expand my fullstack knowledge. Lately, I'm mostly interested in mobile app development with React Native but I'm always interested in anything Web Dev related and have a passion for learning new things.
+               The languages and frameworks mentioned are the ones I’ve been working with most recently, but I have experience with a wide array of web technologies and continuously strive to enhance my full-stack knowledge. Currently, I’m particularly focused on mobile app development with React Native, though my passion for web development keeps me eager to explore all related fields. Feel free to check out some of my work at
             </p>
-            <p>Check out some of my work at
+            <p>
                <a href="https://github.com/ihartw" target="_blank" class="link">GitHub</a>
             </p>
          </div>
-         <div class="col s11 l6">
+         <div class="col s11 l6 bars-container">
             <div class="bar-title">JavaScript<span class="align-right"></span></div>
             <div class="bar">
                <div class="bar-fill"></div>
@@ -90,7 +89,7 @@
    .bar-title {
       font-size: 12px;
       margin-bottom: 5px;
-      margin-top: 20px;
+      margin-top: 10px;
       color: #bfbfbf
    }
 
@@ -107,5 +106,8 @@
    .bar,
    .bar-fill {
       border-radius: 3px
+   }
+   .bars-container {
+      margin-top: 20px;
    }
 </style>

@@ -35,24 +35,28 @@
          link: 'memory-match/index.html',
          imageUrl: PikaImg,
          description: 'A Pokemon memory game made with javascript and css. Help Ash with his memory and improve your own!',
+         tech: ['JavaScript', 'Vue.js', 'Animate CSS', 'HTML'],
       },
       {
          title: 'Rick Sanchez AI',
          link: 'https://rick-sanchez-ai.netlify.app/',
          imageUrl: RickMortyImg,
          description: 'A Rick Sanchez AI chatbot made with the openAI API and Vue.js. Ask Rick anything!',
+         tech: ['JavaScript', 'Vue.js', 'OpenAI API', 'Eleven Labs', 'CSS'],
       },
       {
          title: 'Virtual Keyboard',
          link: 'https://ihartcode-virtual-keyboard.netlify.app/#/',
          imageUrl: KeyboardImg,
          description: `A virtual keyboard made with Vue.js and materialize css. Use your keyboard to play or touch if you're on mobile`,
+         tech: ['JavaScript', 'Vue.js', 'CSS'],
       },
       {
          title: 'Google Books API',
          link: 'https://ihartcode-vue-google-books.netlify.app/',
          imageUrl: GoogleImg,
          description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+         tech: ['JavaScript', 'Vue.js', 'Materialize CSS', 'Google Books API'],
       },
    ])
 
@@ -82,11 +86,11 @@
                <div class="card-reveal grey darken-4 text-white">
                   <span class="card-title">{{project.title}}<i class="material-icons right">close</i></span>
                   <p>{{project.description}}</p>
-                  <div class="row">
-                     <a v-if="project.imageUrl === PikaImg" class="waves-effect waves-light btn-small blue lighten-1 hoverable" @click="pokemonNav">View Project</a>
-                     <a v-else class="waves-effect waves-light btn-small blue lighten-1 hoverable" :href="project.link"
-                        target="_blank">View
-                        Project</a>
+                  <span class="card-title tech">Technologies</span>
+                  <p class="tech-item" v-for="item in project.tech" :key="item">{{ item }}</p>
+                  <div class="row" style="margin-top: 10px;">
+                     <a v-if="project.imageUrl === PikaImg" class="waves-effect waves-light btn-small hoverable" @click="pokemonNav">View Project</a>
+                     <a v-else class="waves-effect waves-light btn-small hoverable" :href="project.link" target="_blank">View Project</a>
                   </div>
                </div>
             </div>
@@ -102,10 +106,21 @@
 
    .projects .card {
       background-color: #212121 !important;
+      border-radius: 10px;
+   }
+
+   .projects .card-image {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
    }
 
    .projects .card-title {
       font-size: 18px;
+   }
+
+   .tech {
+      margin-top: 10px;
+      margin-bottom: 0px !important;
    }
 
    .projects .card-content p a {
@@ -124,9 +139,19 @@
    .projects .btn-small {
       font-size: 10px;
       margin: 10px;
+      background-color: #ef5350;
    }
 
    .card .card-reveal .card-title {
       margin-bottom: 10px;
+   }
+
+   .tech-item {
+      font-size: 12px;
+      margin: 5px 5px 0px 0px;
+      background-color: #3c3c3c;
+      border-radius: 5px;
+      padding: 8px;
+      display: inline-block;
    }
 </style>

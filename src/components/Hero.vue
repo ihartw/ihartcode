@@ -2,7 +2,9 @@
    import { ref } from 'vue'
    import { store } from '../store/store.js'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
+   import AnimatedText from './AnimatedText.vue'
 
+   const animatedName = ref(`<Isaac Hartwick />`);
    const isVisible = ref(false);
    const top = ref(null);
    const keyframes = [
@@ -23,18 +25,15 @@
 </script>
 <template>
    <div class="section scrollspy" id="top"></div>
-   <section class="hero" ref="top">
-      <div class="row">
+   <section class="hero">
+      <div class="row" ref="top">
          <div class="col s12 m6">
             <div class="valign-wrapper">
                <div class="hero-content">
                   <h4>Who is this guy?</h4>
-                  <h1 class="text-black">
-                     <span>{{`<`}}</span>Isaac <span class="highlight">{{`Hartwick />`}}</span>
-                  </h1>
-                  <div class="element"></div>
+                  <AnimatedText :text="animatedName" />
                   <div class="down-arrow clickable" @click="store.scrollTo('about')">
-                     <i class="material-icons medium">expand_more</i>
+                     <img src="../assets/images/arrow-down-3.webp" width="80">
                   </div>
                </div>
             </div>
@@ -110,6 +109,7 @@
       font-size: 18px;
       color: black;
       letter-spacing: .1em;
+      margin-bottom: 0px;
    }
 
    .down-arrow {
