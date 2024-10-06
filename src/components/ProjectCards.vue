@@ -80,7 +80,8 @@
                </div>
                <div class="card-content grey darken-4">
                   <span class="card-title">{{ project.title }}
-                     <i class="material-icons right clickable activator">more_vert</i></span>
+                     <i class="material-icons right clickable activator">more_vert</i>
+                  </span>
                   <p class="clickable activator">Read More</p>
                </div>
                <div class="card-reveal grey darken-4 text-white">

@@ -33,7 +33,7 @@
                   <h4>Who is this guy?</h4>
                   <AnimatedText :text="animatedName" />
                   <div class="down-arrow clickable" @click="store.scrollTo('about')">
-                     <img src="../assets/images/arrow-down-3.webp" width="80">
+                     <img src="../assets/images/down-arrow-7.svg" width="50">
                   </div>
                </div>
             </div>
