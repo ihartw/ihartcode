@@ -1,8 +1,26 @@
 <script setup>
    import { ref, onMounted, onUnmounted } from 'vue'
-   import { useAnimate } from '@vueuse/core'
+   import { useIntersectionObserver, useAnimate } from '@vueuse/core'
    import { pokemonInit } from '../../assets/js/pokemon.js'
    import { confetti } from '../../assets/js/confetti.js'
+
+   const isVisible = ref(false);
+   const pokemon = ref(null);
+   const keyframes = [
+      { opacity: 0, transform: 'translateY(20px)'},
+      { opacity: 1 },
+   ]
+
+   const {isActive} = useIntersectionObserver(pokemon, ([{ isIntersecting }]) => {
+      if(!isVisible.value && isIntersecting) {
+         isVisible.value = true;
+         useAnimate(pokemon, keyframes, {
+            duration: 1000,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+         })
+      }
+   });
 
    onMounted(() => {
       pokemonInit();
@@ -16,7 +34,7 @@
 <template>
    <div class="game-container">
       <div class="intro">
-         <div class="row center-align">
+         <div class="row center-align" ref="pokemon">
             <div class="col s12 m6">
                <div class="row">
                   <p class="left-align" id="introText"></p>
