@@ -1,31 +1,19 @@
 <script setup>
    import { ref } from 'vue'
-   import { store } from '../store/store.js'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
 
    const isVisible = ref(false);
    const music = ref(null);
-   const resumeLine = ref(null);
    const keyframes = [
       { opacity: 0, transform: 'translateX(20px)'},
       { opacity: 1 },
    ]
-
-   const line = [
-      { height: '1px'},
-      { height: '80%' },
-   ]
-
-   const {isActive} = useIntersectionObserver(music, ([{ isIntersecting }]) => {
+   
+   useIntersectionObserver(music, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(music, keyframes, {
             duration: 1000,
-            fill: 'forwards',
-            easing: 'ease-in-out',
-         })
-         useAnimate(resumeLine, line, {
-            duration: 3000,
             fill: 'forwards',
             easing: 'ease-in-out',
          })
@@ -41,7 +29,7 @@
          </div>
       </div>
       <div class="valign-wrapper">
-         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0Q6DYBa3hKX1GyYAQwaK9M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+         <iframe src="https://open.spotify.com/embed/album/0Q6DYBa3hKX1GyYAQwaK9M?utm_source=generator" allowtransparency="true" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
    </section>
 </template>

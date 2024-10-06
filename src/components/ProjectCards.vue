@@ -1,13 +1,9 @@
 <script setup>
    import { ref } from 'vue'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
-   import MarvelImg from '../assets/images/marvel.png'
    import RickMortyImg from '../assets/images/rick_morty.jpeg'
-   import PlanetariumImg from '../assets/images/stars.jpeg'
    import KeyboardImg from '../assets/images/keyboard.png'
    import PikaImg from '../assets/images/pika.jpg'
-   import BlackJackImg from '../assets/images/blackjack.jpg'
-   import StarsImg from '../assets/images/stars.jpeg'
    import GoogleImg from '../assets/images/google_books.png'
    import router from '../router/index.js'
 
@@ -18,7 +14,7 @@
       { opacity: 1 },
    ]
 
-   const {isActive} = useIntersectionObserver(projectsRef, ([{ isIntersecting }]) => {
+   useIntersectionObserver(projectsRef, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(projectsRef, keyframes, {
@@ -107,12 +103,12 @@
 
    .projects .card {
       background-color: #212121 !important;
-      border-radius: 10px;
+      border-radius: 9px;
    }
 
    .projects .card-image {
-      border-top-right-radius: 10px;
-      border-top-left-radius: 10px;
+      border-top-right-radius: 9px;
+      border-top-left-radius: 9px;
    }
 
    .projects .card-title {

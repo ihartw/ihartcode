@@ -12,7 +12,7 @@
       { opacity: 1 },
    ]
 
-   const {isActive} = useIntersectionObserver(top, ([{ isIntersecting }]) => {
+   useIntersectionObserver(top, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(top, keyframes, {
@@ -23,6 +23,7 @@
       }
    });
 </script>
+
 <template>
    <div class="section scrollspy" id="top"></div>
    <section class="hero">
@@ -53,7 +54,7 @@
       background: white !important;
       opacity: .8;
       overflow-y: hidden;
-      height: 90vh;
+      height: 100vh;
    }
 
    .hero h1 {

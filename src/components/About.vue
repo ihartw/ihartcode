@@ -1,6 +1,5 @@
 <script setup>
    import { ref } from 'vue'
-   import { store } from '../store/store.js'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
 
    const isVisible = ref(false);
@@ -9,8 +8,8 @@
       { opacity: 0, transform: 'translateX(20px)'},
       { opacity: 1 },
    ]
-
-   const {isActive} = useIntersectionObserver(about, ([{ isIntersecting }]) => {
+   
+   useIntersectionObserver(about, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(about, keyframes, {
@@ -52,6 +51,6 @@
    }
 
    .about .web-apps img {
-      max-width: 60%;
+      max-width: 80%;
    }
 </style>
