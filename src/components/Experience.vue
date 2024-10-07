@@ -80,7 +80,7 @@
    }
 
    .timeline-container {
-      margin-left: 50px;
+      margin-left: 40px;
    }
 
    .timeline {
@@ -89,7 +89,7 @@
       width: 1px;
       height: 1px;
       position: absolute;
-      left: 24px;
+      left: 14px;
       background: #777;
       -webkit-transition: all 2s ease-out;
       -moz-transition: all 2s ease-out;

@@ -150,5 +150,6 @@
       border-radius: 5px;
       padding: 8px;
       display: inline-block;
+      font-family: Lekton, sans-serif;
    }
 </style>

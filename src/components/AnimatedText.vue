@@ -28,7 +28,7 @@
       transform: translateY(10px);
       animation: fadeInUp 0.5s forwards;
       color: black;
-      font-size: 30px;
+      font-size: 35px;
       margin: 10px 0;
       font-family: Lekton, sans-serif;
    }
