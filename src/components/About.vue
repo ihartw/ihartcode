@@ -44,8 +44,7 @@ onMounted(() => {
             </p>
          </div>
          <div class="col m12 l6 pull-l6 web-apps">
-            <DotLottieVue style="height: 400px; width: 400px" ref="playerRef"
-               src="https://lottie.host/3dee8212-5a42-461e-ab33-9532ed53c712/vL3D8GDsrL.json" />
+            <DotLottieVue style="height: 375px; width: 375px" ref="playerRef" src="https://lottie.host/3dee8212-5a42-461e-ab33-9532ed53c712/vL3D8GDsrL.json" />
          </div>
       </div>
    </section>
