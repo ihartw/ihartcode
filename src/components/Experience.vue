@@ -269,7 +269,12 @@ ul li:before {
       margin-left: 0px;
       display: block ruby;
       overflow: scroll;
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
    }
+
    .timeline {
       display: none;
    }
@@ -277,10 +282,10 @@ ul li:before {
    .timeline-item {
       justify-content: center;
       margin-right: 5px;
+      padding: 0 20px;
    }
 
    .timeline-item:before {
       display: none;
    }
-}
-</style>
+}</style>
