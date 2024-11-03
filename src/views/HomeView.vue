@@ -44,12 +44,6 @@ onMounted(() => {
 
 <style>
 .container {
-   width: 75% !important;
-}
-
-@media screen and (max-width: 600px) {
-   .container {
-      width: 90% !important;
-   }
+   width: 95% !important;
 }
 </style>

@@ -49,6 +49,11 @@ p {
    line-height: 15px
 }
 
+h5 {
+   font-family: "Lekton", monospace;
+   font-style: normal;
+}
+
 .clickable {
    cursor: pointer;
 }
