@@ -101,7 +101,7 @@ const keyframes = [
 
 const line = [
    { height: '1px' },
-   { height: '220px' },
+   { height: '200px' },
 ]
 
 useIntersectionObserver(experience, ([{ isIntersecting }]) => {
@@ -146,9 +146,7 @@ const handleClick = (item) => {
                <div class="timeline" ref="resumeLine"></div>
                <div v-for="item in companies" :key="item.id" class="timeline-item" @click="handleClick(item)" :id="item.id"
                   :class="{ 'active-timeline-item': activeItem?.id === item.id }">
-                  <div class="details">
-                     <span class="title">{{ item.company }}</span>
-                  </div>
+                  <span class="title">{{ item.company }}</span>
                </div>
             </div>
          </div>
@@ -156,7 +154,7 @@ const handleClick = (item) => {
             <div class="active-role" ref="activeRole">
                <div v-if="role">
                   <h5>{{ role.role }} <a class="company clickable link" :href="role.link" target="_blank">{{
-                     `@ ${role.company}` }}</a></h5>
+                     `@${role.company}` }}</a></h5>
                   <p>{{ role.date }}</p>
                   <ul>
                      <li v-for="detail in role.details" :key="detail">{{ detail }}</li>
@@ -186,7 +184,7 @@ const handleClick = (item) => {
    width: 1px;
    height: 1px;
    position: absolute;
-   left: 30px;
+   left: 25px;
    background: #777;
    -webkit-transition: all 2s ease-out;
    -moz-transition: all 2s ease-out;
@@ -204,11 +202,10 @@ const handleClick = (item) => {
 
 .timeline-item {
    border-radius: 5px;
-   padding: 5px;
-   width: 150px;
+   width: 140px;
    display: flex;
    transition: background 0.5s ease;
-   height: 50px;
+   height: 45px;
    align-items: center;
    margin: 5px;
 }
@@ -283,6 +280,8 @@ ul li:before {
       justify-content: center;
       margin-right: 5px;
       padding: 0 20px;
+      display: flex;
+      min-width: 150px;
    }
 
    .timeline-item:before {

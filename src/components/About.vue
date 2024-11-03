@@ -40,7 +40,7 @@ onMounted(() => {
                free to reach out on
             </p>
             <p>
-               <a href="https://www.linkedin.com/in/isaac-hartwick-44b883117" target="_blank" class="link">LinkedIn</a>
+               <a href="https://www.linkedin.com/in/isaac-hartwick-44b883117" target="_blank" class="link">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
             </p>
          </div>
          <div class="col m12 l6 pull-l6 web-apps">

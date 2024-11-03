@@ -1,11 +1,9 @@
 <script setup>
    import { ref } from 'vue'
-   import { store } from '../store/store.js'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
 
    const isVisible = ref(false);
    const skills = ref(null);
-   const bar = ref(document.querySelectorAll('.bar-fill'));
    const keyframes = [
       { opacity: 0},
       { opacity: 1, transform: 'translateX(20px)' },
@@ -16,7 +14,7 @@
       { width: '100%' },
    ]
 
-   const {isActive} = useIntersectionObserver(skills, ([{ isIntersecting }]) => {
+   useIntersectionObserver(skills, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(skills, keyframes, {
@@ -45,7 +43,7 @@
                The languages and frameworks mentioned are the ones I’ve been working with most recently, but I have experience with a wide array of web technologies and continuously strive to enhance my full-stack knowledge. Currently, I’m particularly focused on mobile app development with React Native, though my passion for web development keeps me eager to explore all related fields. Feel free to check out some of my work at
             </p>
             <p>
-               <a href="https://github.com/ihartw" target="_blank" class="link">GitHub</a>
+               <a href="https://github.com/ihartw" target="_blank" class="link">GitHub <i class="fa-brands fa-github"></i></a>
             </p>
          </div>
          <div class="col s11 l6 bars-container">
