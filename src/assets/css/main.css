@@ -37,11 +37,10 @@ p {
 
 h3 {
    font-family: Lekton, sans-serif;
-   font-size: 2.1rem !important;
+   font-size: 2.5rem !important;
    color: #bfbfbf;
    letter-spacing: .1em;
    line-height: 50px !important;
-   border-bottom: 1px dotted rgba(399, 399, 399, .5);
 }
 
 p {

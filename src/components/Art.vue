@@ -1,5 +1,4 @@
 <script setup>
-   import { ref } from 'vue'
    import Carousel from './Carousel.vue'
    import ArtModal from './ArtModal.vue'
 </script>
@@ -17,3 +16,9 @@
       </div>
    </section>
 </template>
+<style scoped>
+   #art {
+      margin-bottom: 50px;
+      margin-top: 100px;
+   }
+</style>
