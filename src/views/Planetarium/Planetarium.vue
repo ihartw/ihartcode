@@ -1,74 +1,64 @@
 <script setup>
-   import {
-      ref,
-      onMounted,
-      onUnmounted
-   } from 'vue'
-   import { useAnimate } from '@vueuse/core'
+import { onMounted, ref } from 'vue'
+import { useIntersectionObserver, useAnimate } from '@vueuse/core'
 
-   onMounted(() => {
-      
-      console.log(screenHeight.value);
-      // setStars();
-   });
-   const mercury = ref(null);
-   const mercuryOrbit = useAnimate(mercury,{
-      from: {
-         transform: 'rotate(0deg)'
-      },
-      to: {
-         transform: 'rotate(360deg) translateX(140px) rotate(-360deg)'
-      },
-      duration: 10000,
-      repeat: Infinity,
-      easing: 'linear'
-   });
-   const screenHeight = ref(window.innerHeight);
-   const stars = ref([]);
-   const twinkleStars = () => {
-      const random = Math.floor(Math.random() * stars.value.length);
-      const twinklingStar = stars.value[random % stars.value.length];
-      twinklingStar.twinkle = true;
+const isVisible = ref(false);
+const projectContainer = ref(null);
+const starsContainer = ref(null);
+const solarSystemVisible = ref(true);
+const planetInfoVisible = ref(false);
+const planetItem = ref({ title: 'Sun', name: 'sun', class: 'sun-item' });
+const keyframes = [
+   { opacity: 0 },
+   { opacity: 1 },
+]
 
-      setTimeout(() => {
-         twinklingStar.twinkle = false;
-      }, 500);
-   };
-   const setStars = () => {
-      const numberOfStars = Math.floor(window.innerWidth / 2);
-      for (let i = 0; i < numberOfStars; i++) {
-         const starsYAxis = Math.floor(Math.random() * 150) + 1;
-         const starsXAxis = Math.floor(Math.random() * 150) + 1;
-         const starSize = Math.random();
 
-         stars.value.push({
-            id: i,
-            y: `${starsYAxis}%`,
-            x: `${starsXAxis}%`,
-            size: starSize,
-            twinkle: false,
-         });
+onMounted(() => {
+   M.AutoInit();
+   useIntersectionObserver(projectContainer, ([{ isIntersecting }]) => {
+      if (!isVisible.value && isIntersecting) {
+         isVisible.value = true;
+         useAnimate(projectContainer, keyframes, {
+            duration: 1000,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+         })
       }
+   });
+});
 
-      setInterval(() => {
-         twinkleStars();
-      }, 200);
-   };
+const planets = [
+   { title: 'Sun', name: 'sun', class: 'sun-item', description: 'The Sun is a massive, hot sphere of gas at the center of our solar system, producing energy through nuclear fusion. Its intense heat and light sustain life on Earth and influence the orbits of planets, moons, and other celestial objects.' },
+   { title: 'Mercury', name: 'mercury', class: 'mercury-item', description: 'Mercury is the smallest and innermost planet in our solar system, orbiting closest to the Sun with extreme temperature variations between its day and night sides. It has a rocky, cratered surface similar to our Moon and lacks a significant atmosphere to retain heat or protect it from solar radiation.' },
+   { title: 'Venus', name: 'venus', class: 'venus-item', description: 'Venus is the second planet from the Sun, known for its thick, toxic atmosphere filled with carbon dioxide and clouds of sulfuric acid, creating a runaway greenhouse effect that makes it the hottest planet in the solar system. Its surface is rocky and volcanic, and it rotates in the opposite direction to most planets, meaning the Sun rises in the west and sets in the east.' },
+   { title: 'Earth', name: 'earth', class: 'earth-item', description: 'Earth is the third planet from the Sun and the only known world to support life, thanks to its unique combination of liquid water, protective atmosphere, and mild temperatures. It has a diverse surface of continents, oceans, and ecosystems that sustain a rich variety of plants, animals, and human life.' },
+   { title: 'Mars', name: 'mars', class: 'mars-item', description: 'Mars, the fourth planet from the Sun, is a cold, desert-like world with a reddish appearance due to iron oxide on its surface. Known for its vast canyons, extinct volcanoes, and polar ice caps, Mars is a prime target in the search for past or present signs of life.' },
+   { title: 'Jupiter', name: 'jupiter', class: 'jupiter-item', description: 'Jupiter, the largest planet in our solar system, is a gas giant known for its powerful storms, including the iconic Great Red Spot, a massive storm persisting for centuries. Composed primarily of hydrogen and helium, Jupiter has over 75 moons and a strong magnetic field, making it a fascinating and complex planet to study.' },
+   { title: 'Saturn', name: 'saturn', class: 'saturn-item', description: 'Saturn, the sixth planet from the Sun, is famous for its stunning ring system made of ice and rock particles that extend thousands of kilometers. As a gas giant composed mostly of hydrogen and helium, Saturn also has numerous moons, including the largest, Titan, which features a thick atmosphere and lakes of liquid methane.' },
+   { title: 'Uranus', name: 'uranus', class: 'uranus-item', description: 'Uranus is the seventh planet from the Sun and is unique for its sideways rotation, with its axis tilted at an extreme angle of about 98 degrees. This ice giant is primarily composed of hydrogen, helium, and icy compounds, and is surrounded by faint rings and 27 known moons.' },
+   { title: 'Neptune', name: 'neptune', class: 'neptune-item', description: 'Neptune is the eighth and farthest planet from the Sun, known for its striking blue color, which is due to the methane in its atmosphere. This icy giant has the strongest winds in the solar system and is surrounded by five rings and 14 moons, with Triton being its largest moon.' },
+]
+
+const selectPlanet = (item) => {
+   solarSystemVisible.value = false;
+   planetInfoVisible.value = true;
+   planetItem.value = item;
+}
+
+const backToSolarSystem = () => {
+   solarSystemVisible.value = true;
+   planetInfoVisible.value = false;
+}
+
 </script>
 
 <template>
-   <a class="waves-effect waves-light btn back-btn grey lighten-4" @click="backToSolarSystem()"><i
-         class="material-icons left">arrow_back</i>Solar System</a>
-   <div class="solar-system">
-      <!-- <div class="sun planet tooltipped" @click="selectSun()" data-position="top" data-tooltip="Sun">
-         <div class="sun-glow"></div>
-      </div> -->
+   <div class="project-container" ref="projectContainer">
+      <div class="solar-system" :class="{'hidden': !solarSystemVisible}">
 
-      <!-- Orbit Lines -->
-      <div class="rings">
-         <div class="ring1">
-            <!-- <div class="mercury planet tooltipped" @click="selectMercury()" data-position="top" data-tooltip="Mercury"></div> -->
-         </div>
+         <!-- Orbit Lines -->
+         <div class="ring1"></div>
          <div class="ring2"></div>
          <div class="ring3"></div>
          <div class="ring4"></div>
@@ -76,42 +66,27 @@
          <div class="ring6"></div>
          <div class="ring7"></div>
          <div class="ring8"></div>
+
+         <!-- Planets in Orbit-->
+         <div v-for="planet in planets" :key="planet" class="planet tooltipped" :class="planet.name" @click="selectPlanet(planet)" data-position="top" :data-tooltip="planet.title"></div>
       </div>
 
-      <!-- Planets in Orbit-->
-      <!-- <div class="mercury planet tooltipped" @click="selectMercury()" data-position="top" data-tooltip="Mercury">
-      </div> -->
-      <!-- <div class="venus planet tooltipped" @click="selectVenus()" data-position="top" data-tooltip="Venus"></div>
-      <div class="earth planet tooltipped" @click="selectEarth()" data-position="top" data-tooltip="Earth"></div>
-      <div class="mars planet tooltipped" @click="selectMars()" data-position="top" data-tooltip="Mars"></div>
-      <div class="jupiter planet tooltipped" @click="selectJupiter()" data-position="top" data-tooltip="Jupiter">
+      <!-- Planet Info -->
+      <div class="planet-items" v-if="planetInfoVisible">
+         <a class="waves-effect waves-light btn back-btn grey lighten-1" @click="backToSolarSystem()"><i class="material-icons left">arrow_back</i>Solar System</a>
+         <div class="animate__animated animate__zoomInLeft">
+            <h3 class="planet-item-title">{{ planetItem.title }}</h3>
+            <div class="planet-item" :class="planetItem.class"></div>
+         </div>
       </div>
-      <div class="saturn planet tooltipped" @click="selectSaturn()" data-position="top" data-tooltip="Saturn"></div>
-      <div class="uranus planet tooltipped" @click="selectUranus()" data-position="top" data-tooltip="Uranus"></div>
-      <div class="neptune planet tooltipped" @click="selectNeptune()" data-position="top" data-tooltip="Neptune">
-      </div> -->
+
+      <!-- Stars -->
+      <div class="stars-container" ref="starsContainer">
+         <div class="stars"></div>
+         <div class="stars2"></div>
+         <div class="stars3"></div>
+      </div>
    </div>
-
-   <!-- Planet Info -->
-   <div class="planet-items">
-      <h3 class="planet-item-title"></h3>
-      <div class="planet-item sun-item"></div>
-      <div class="planet-item earth-item"></div>
-      <div class="planet-item mercury-item"></div>
-      <div class="planet-item venus-item"></div>
-      <div class="planet-item mars-item"></div>
-      <div class="planet-item jupiter-item"></div>
-      <div class="planet-item saturn-item"></div>
-      <div class="planet-item uranus-item"></div>
-      <div class="planet-item neptune-item"></div>
-   </div>
-
-   <!-- Stars -->
-   <!-- <div class="stars-container">
-      <div v-for="star in stars" class="stars" :key="star.id" :style="{ top: star.y, left: star.x, transform: 'scale(' + star.size + ')' }"></div>
-   </div> -->
-
 </template>
 
-<style scoped src="./css/planets.css">
-</style>
+<style scoped src="./css/planets.css"></style>

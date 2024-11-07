@@ -1,10 +1,14 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+   <RouterView />
 </template>
 
 <style scoped>
+@font-face {
+   font-family: 'StarTrek';
+   src: url('./assets/fonts/Star_Trek_Future.ttf');
+}
 </style>

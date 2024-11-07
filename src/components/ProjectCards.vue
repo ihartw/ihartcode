@@ -5,6 +5,7 @@
    import KeyboardImg from '../assets/images/keyboard.png'
    import PikaImg from '../assets/images/pika.jpg'
    import GoogleImg from '../assets/images/google_books.png'
+   import StarsImg from '../assets/images/stars.jpeg'
    import router from '../router/index.js'
 
    const isVisible = ref(false);
@@ -54,10 +55,21 @@
          description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
          tech: ['JavaScript', 'Vue.js', 'Materialize CSS', 'Google Books API'],
       },
+      {
+         title: 'Planetarium',
+         link: '',
+         imageUrl: StarsImg,
+         description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+         tech: ['JavaScript', 'Vue.js', 'Materialize CSS', 'Google Books API'],
+      },
    ])
 
    const pokemonNav = () => {
       router.push({ name: 'pokemon' })
+   }
+
+   const planetsNav = () => {
+      router.push({ name: 'planetarium' })
    }
 </script>
 
@@ -87,6 +99,7 @@
                   <p class="tech-item" v-for="item in project.tech" :key="item">{{ item }}</p>
                   <div class="row" style="margin-top: 10px;">
                      <a v-if="project.imageUrl === PikaImg" class="waves-effect waves-light btn-small hoverable" @click="pokemonNav">View Project</a>
+                     <a v-if="project.imageUrl === StarsImg" class="waves-effect waves-light btn-small hoverable" @click="planetsNav">View Project</a>
                      <a v-else class="waves-effect waves-light btn-small hoverable" :href="project.link" target="_blank">View Project</a>
                   </div>
                </div>
