@@ -53,7 +53,7 @@
          title: 'Google Books API',
          link: 'https://ihartcode-vue-google-books.netlify.app/',
          imageUrl: GoogleImg,
-         description: 'A web app built with Vue.js and the Google Books API. Search for books and save them to your library.',
+         description: 'A simple web app built with Vue.js and the Google Books API created to demonstrate my understanding of REST APIs. Search for books and save them to your library.',
          tech: ['JavaScript', 'Vue.js', 'Materialize CSS', 'Google Books API'],
       },
       {
