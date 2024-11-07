@@ -36,8 +36,7 @@ onMounted(() => {
                I’m a passionate Software Engineer who thrives on problem-solving and crafting elegant web and mobile
                applications. Beyond coding, I enjoy playing musical instruments and drawing, which fuel my creativity. I
                love blending my artistic flair with my technical expertise to develop exceptional products and engaging
-               user experiences. If you’re seeking a versatile engineer with a diverse skill set, I’d love to connect! Feel
-               free to reach out on
+               user experiences. If you’re seeking a versatile engineer with a diverse skill set, I’d love to connect!
             </p>
             <p>
                <a href="https://www.linkedin.com/in/isaac-hartwick-44b883117" target="_blank" class="link">LinkedIn <i class="fa-brands fa-linkedin"></i></a>

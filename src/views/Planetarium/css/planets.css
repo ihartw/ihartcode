@@ -1025,7 +1025,6 @@
 @media (max-width: 768px) {
    .solar-system {
       transform: scale(.5);
-      left: 25%;
    }
 
    .planet-item {

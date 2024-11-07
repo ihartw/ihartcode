@@ -10,11 +10,16 @@
    }
 }
 
+html {
+   overflow-x: hidden !important;
+}
+
 body {
    color: hsl(0, 0%, 75%);
    font-family: 'Open Sans', sans-serif;
    font-weight: 400;
    background: #1a191d;
+   overflow-x: hidden;
 }
 
 h1 {

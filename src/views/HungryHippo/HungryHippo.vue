@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
    <div class="project-container" ref="projectContainer">
-      <h3 class="center-align grey darken-4">Working on it...</h3>
+      <h3 class="center-align grey darken-4">Making updates just chill 👽 ✌🏽...</h3>
       <!-- <div class="circle">
          <div class="dot"></div>
       </div>
