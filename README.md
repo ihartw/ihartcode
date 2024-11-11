@@ -24,9 +24,9 @@ npm run build
 The app is a hybrid mixture of microfrontends. Some of the projects have been modularized as part of the monorepo and some have been indepently deployed as standalone apps. Since all of the projects are built with vue, I've considered integrating the polyrepos into the monorepo but each repo has different dependencies so I've left it as is for now.
 
 **Components / Design System**
-- I componentized each section of the home view for best practices & maintainability. Hypothetically, this is also great for a/b testing ecommerce and would allow me to rapidly create and deploy new isolated sections for testing purposes.
+> I componentized each section of the home view for best practices & maintainability. Hypothetically, this is also great for a/b testing ecommerce and would allow me to rapidly create and deploy new isolated sections for testing purposes.
 
-- The MaterializeCSS framework already provides a design system but if I had to implement my own, I would base it off [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/).
+> The MaterializeCSS framework already provides a design system but if I had to implement my own, I would base it off [Atomic Design](https://atomicdesign.bradfrost.com/chapter-2/).
 
 **CSS**
 > The global css folder has 2 files. The base.css is where I would add css variables and normalize styles. main.css has global styles that can be reused throughout the entire app but custom styles are scoped directly to the components. If I weren't using MaterializeCSS I would create my own helpers.css file or use Tailwind css.
