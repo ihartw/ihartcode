@@ -64,4 +64,6 @@ The app is a hybrid mixture of microfrontends. Some of the projects have been mo
 
 ## What I wish the app showed more of
 - Building scalable/reusable components with atomic design, component lifecycles, and global state management. If the app were bigger I would use VueX or Pinia. I also have experience using React Context and Redux.
-- **Testing** I haven't implemented unit tests but may do that in the future.
+- **Testing** - I haven't implemented unit tests but may do that in the future.
+- **Code Splitting** - If I wanted to implement code splitting, only the components integral to the first meaningful paint would be rendered and the rest would be lazy loaded.
+
