@@ -40,9 +40,6 @@ The app is a hybrid mixture of microfrontends. Some of the projects have been mo
 **Services**
 > There's an empty services folder which is where I would modularize services for dependency injection.
 
-**Code Splitting**
-> If I wanted to implement code splitting, only the components integral to the first meaningful paint would be rendered and the rest would be lazy loaded.
-
 ## Technologies
 - Vue 3 
 - Vite 
