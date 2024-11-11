@@ -1,8 +1,5 @@
 <script setup>
-   import {
-      ref,
-      onMounted
-   } from 'vue'
+   import { ref } from 'vue'
    import BruceLeeImg from '../assets/images/bruce-lee1.jpeg'
    import WalkenImg from '../assets/images/walken.png'
    import ShredderImg from '../assets/images/shredder.jpeg'

@@ -1,5 +1,5 @@
 <script setup>
-import { RouterView } from 'vue-router'
+   import { RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -7,8 +7,8 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-@font-face {
-   font-family: 'StarTrek';
-   src: url('./assets/fonts/Star_Trek_Future.ttf');
-}
+   @font-face {
+      font-family: 'StarTrek';
+      src: url('./assets/fonts/Star_Trek_Future.ttf');
+   }
 </style>

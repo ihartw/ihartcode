@@ -1,5 +1,3 @@
-@import './light-red.css';
-
 :root {
    --background-color: #1a191d;
 }
@@ -30,8 +28,7 @@ h1 {
    padding-bottom: 30px
 }
 
-h2,
-p {
+h2, p {
    font-family: 'Open Sans', sans-serif;
    font-size: 18px;
    color: #969696;
@@ -74,4 +71,20 @@ h5 {
 
 .section {
    padding: 0px !important;
+}
+
+.highlight {
+	color: #ef5350 !important;
+}
+
+.bar-fill {
+	background: #ef5350;
+}
+
+.link {
+	color: #ef5350 !important;
+}
+
+.link:hover {
+	text-decoration: underline;
 }

@@ -1,30 +1,30 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useIntersectionObserver, useAnimate } from '@vueuse/core'
-import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
+   import { ref, onMounted } from 'vue'
+   import { useIntersectionObserver, useAnimate } from '@vueuse/core'
+   import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 
-const isVisible = ref(false);
-const about = ref(null);
-const playerRef = ref(null);
-const keyframes = [
-   { opacity: 0, transform: 'translateX(20px)' },
-   { opacity: 1 },
-]
+   const isVisible = ref(false);
+   const about = ref(null);
+   const playerRef = ref(null);
+   const keyframes = [
+      { opacity: 0, transform: 'translateX(20px)' },
+      { opacity: 1 },
+   ]
 
-onMounted(() => {
-   const dotLottie = playerRef.value.getDotLottieInstance();
-   useIntersectionObserver(about, ([{ isIntersecting }]) => {
-      if (!isVisible.value && isIntersecting) {
-         isVisible.value = true;
-         useAnimate(about, keyframes, {
-            duration: 1000,
-            fill: 'forwards',
-            easing: 'ease-in-out',
-         });
-         dotLottie.play();
-      }
-   });
-})
+   onMounted(() => {
+      const dotLottie = playerRef.value.getDotLottieInstance();
+      useIntersectionObserver(about, ([{ isIntersecting }]) => {
+         if (!isVisible.value && isIntersecting) {
+            isVisible.value = true;
+            useAnimate(about, keyframes, {
+               duration: 1000,
+               fill: 'forwards',
+               easing: 'ease-in-out',
+            });
+            dotLottie.play();
+         }
+      });
+   })
 </script>
 
 <template>

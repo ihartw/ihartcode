@@ -36,11 +36,11 @@
          tech: ['JavaScript', 'Vue.js', 'Animate CSS', 'HTML'],
       },
       {
-         title: 'Rick Sanchez AI',
+         title: 'Rick Sanchez A.I.',
          link: 'https://rick-sanchez-ai.netlify.app/',
          imageUrl: RickMortyImg,
-         description: 'A Rick Sanchez AI chatbot made with the openAI API and Vue.js. Ask Rick anything!',
-         tech: ['JavaScript', 'Vue.js', 'OpenAI API', 'Eleven Labs', 'CSS'],
+         description: 'A Rick Sanchez A.I. chatbot built for people to have a conversation with one of their favorite characters. Ask Rick anything!',
+         tech: ['Vue.js', 'Vite', 'OpenAI API', 'Eleven Labs', 'CSS Animations', 'JavaScript', 'FireBase'],
       },
       {
          title: 'Virtual Keyboard',
@@ -128,7 +128,7 @@
    }
 
    .projects .card {
-      background-color: #212121 !important;
+      background-color: #212121;
       border-radius: 9px;
    }
 

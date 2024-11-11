@@ -1,5 +1,5 @@
 <script setup>
-   import { ref, onMounted } from 'vue'
+   import { ref } from 'vue'
    import { store } from '../store/store.js'
    import { useIntersectionObserver, useAnimate } from '@vueuse/core'
    import BruceLeeImg from '../assets/images/bruce-lee1.jpeg'
@@ -22,7 +22,7 @@
       { opacity: 1, transform: 'translateX(20px)' },
    ]
 
-   const {isActive} = useIntersectionObserver(art, ([{ isIntersecting }]) => {
+   useIntersectionObserver(art, ([{ isIntersecting }]) => {
       if(!isVisible.value && isIntersecting) {
          isVisible.value = true;
          useAnimate(art, keyframes, {

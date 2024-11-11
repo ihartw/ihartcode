@@ -1,8 +1,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useIntersectionObserver, useAnimate } from '@vueuse/core'
-import { pokemonInit } from '../../assets/js/pokemon.js'
-import { confetti } from '../../assets/js/confetti.js'
+import { pokemonInit } from './js/pokemon.js'
+import { confetti } from './js/confetti.js'
 
 const isVisible = ref(false);
 const pokemonContainer = ref(null);

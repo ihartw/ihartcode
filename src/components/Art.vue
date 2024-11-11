@@ -16,6 +16,7 @@
       </div>
    </section>
 </template>
+
 <style scoped>
    #art {
       margin-bottom: 50px;
