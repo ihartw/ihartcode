@@ -1,6 +1,6 @@
 # IHartCode
 
-My professional portfolio showcasing various projects and skills. I designed, built, and deployed it with [Vue 3](https://vuejs.org/) + [MaterializeCSS Framework](https://materializecss.com/) + [Netlify](https://www.netlify.com/).
+My professional portfolio showcasing various projects and skills. I designed, built, and deployed it with [Vue 3](https://vuejs.org/) + [MaterializeCSS](https://materializecss.com/) + [Netlify](https://www.netlify.com/).
 
 ## Project Setup
 
