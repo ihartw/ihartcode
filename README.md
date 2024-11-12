@@ -21,7 +21,7 @@ npm run build
 ```
 
 ## Structure
-The app is a hybrid mixture of microfrontends. Some of the projects have been modularized as part of the monorepo and some have been indepently deployed as standalone apps. Since all of the projects are built with vue, I've considered integrating the polyrepos into the monorepo but each repo has different dependencies so I've left it as is for now.
+The app is a hybrid mixture of microfrontends. Some of the projects have been modularized as part of the monorepo and some have been independently deployed as standalone apps. Since all of the projects are built with vue, I've considered integrating the polyrepos into the monorepo but each repo has different dependencies so I've left it as is for now.
 
 **Components / Design System**
 > I componentized each section of the home view for best practices & maintainability. Hypothetically, this is also great for a/b testing and would allow me to rapidly create and deploy new isolated sections for testing purposes.
