@@ -797,7 +797,7 @@
 }
 
 .venus-item {
-   background: url('../img/venus.png');
+   background: url('../img/Venus.png');
    background-size: contain;
    animation: spin 170s linear infinite !important;
 }
