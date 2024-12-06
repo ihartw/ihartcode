@@ -50,17 +50,3 @@ The app is a hybrid mixture of microfrontends. Some of the projects have been mo
 - JavaScript
 - Netlify
 
-## I hope this app demonstrates:
-- Ability to design, build, and deploy modern webapps with the latest technologies
-- Understanding of the Vue framework, components, routers, and build tools like Vite
-- Understanding of app architecture & dividing a codebase into modules 
-- Ability to adopt and integrate third party front-end frameworks
-- The ability to deploy apps utilizing CI/CD
-- Working with Vue & CSS animations
-- My interests and skills outside of coding (music & art)
-
-## What I wish the app showed more of
-- Building scalable/reusable components with atomic design, component lifecycles, and global state management. If the app were bigger I would use VueX or Pinia. I also have experience using React Context and Redux.
-- **Testing** - I haven't implemented unit tests but may do that in the future.
-- **Code Splitting** - If I wanted to implement code splitting, only the components integral to the first meaningful paint would be rendered and the rest would be lazy loaded.
-
